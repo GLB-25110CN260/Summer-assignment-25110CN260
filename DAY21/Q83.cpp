@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    string s;
+    getline(cin,s);
+
+    int v=0,c=0;
+
+    for(int i=0;s[i]!='\0';i++)
+    {
+        if((s[i]>='A'&&s[i]<='Z')||(s[i]>='a'&&s[i]<='z'))
+        {
+            if(s[i]=='a'||s[i]=='e'||s[i]=='i'||s[i]=='o'||s[i]=='u'||
+               s[i]=='A'||s[i]=='E'||s[i]=='I'||s[i]=='O'||s[i]=='U')
+                v++;
+            else
+                c++;
+        }
+    }
+
+    cout<<"Vowels = "<<v<<endl;
+    cout<<"Consonants = "<<c;
+}
